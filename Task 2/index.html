@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Title Change </title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .title {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .title:hover {
+    background-color: #2980b9;
+  }
+</style>
+
+</head>
+<body>
+
+<h1 id="dynamicTitle" class="title" onclick="changeTitle()">Software Engineer</h1>
+
+<script>
+    let titleToggle = true; // Initial state
+
+    function changeTitle() {
+        let element = document.getElementById("dynamicTitle");
+
+        if (titleToggle) {
+            // Change content to "Web Developer"
+            element.innerHTML = "Web Developer";
+            element.style.backgroundColor = "#e74c3c";
+        } else {
+            // Change content to "Software Engineer"
+            element.innerHTML = "Software Engineer";
+            element.style.backgroundColor = "#3498db";
+        }
+
+        // Toggle state
+        titleToggle = !titleToggle;
+    }
+</script>
+
+</body>
+</html>
